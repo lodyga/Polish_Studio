@@ -1,0 +1,9 @@
+partial
+xkb_symbols "60c" {
+
+    // Contact: Łukasz Łodożyński <lodyga@o2.pl>
+
+    include "60(60c)"
+
+    name[Group1]="Polish (Studio)";
+};

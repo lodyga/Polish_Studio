@@ -1,0 +1,273 @@
+[
+  {
+    "key": "ctrl+[Tab]",
+    "command": "workbench.action.nextEditorInGroup"
+    // "command": "workbench.action.nextEditor"
+    // "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
+  },
+  {
+    "key": "ctrl+shift+[Tab]",
+    "command": "workbench.action.previousEditorInGroup"
+    // "command": "workbench.action.previousEditor"
+    // "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+  },
+  {
+    "key": "ctrl+shift+[Digit4]",
+    "command": "workbench.action.terminal.kill"
+  },
+  // bind delete to backspace
+  {
+    "key": "shift+[Backspace]",
+    "command": "deleteRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+[Backspace]",
+    "command": "deleteWordRight",
+    //"command": "deleteWordStartRight",
+    //"command": "deleteWordEndRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  // delete line
+  {
+    "key": "alt+[Backspace]",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  // delete word
+  {
+    "key": "shift+alt+[Backspace]",
+    "command": "deleteInsideWord",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  // Delete all left
+  {
+    "key": "ctrl+alt+[Backspace]",
+    "command": "deleteAllLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+shift+[Backspace]",
+    "command": "deleteAllRight",
+    "when": "textInputFocus"
+  },
+  // move cursor vertically by 10 lines, select vertically by 10 lines
+  {
+    "key": "ctrl+Down",
+    "command": "lineJumper.moveDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+Up",
+    "command": "lineJumper.moveUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+Down",
+    "command": "lineJumper.selectDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+Up",
+    "command": "lineJumper.selectUp",
+    "when": "editorTextFocus"
+  },
+  // move lines vertically
+  {
+    "key": "alt+[KeyI]",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+[KeyK]",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // outdentLines indentLines
+  {
+    "key": "alt+[KeyJ]",
+    "command": "editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+[KeyL]",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // navigate back/forward
+  {
+    "key": "alt+[KeyU]",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "alt+[KeyN]",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "alt+[KeyM]",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "shift+alt+[KeyU]",
+    "command": "cursorUndo",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+[KeyN]",
+    "command": "cursorUndo",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+[KeyM]",
+    "command": "cursorRedo",
+    "when": "textInputFocus"
+  },
+  // insert Cursor
+  {
+    "key": "shift+alt+[KeyI]",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+[KeyK]",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+[Comma]",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  // moves selected left/right not nesessery; move selected words horizontally (not sure if needed, but looks cool)
+  {
+    "key": "shift+alt+[KeyJ]",
+    "command": "editor.action.moveCarretLeftAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+[KeyL]",
+    "command": "editor.action.moveCarretRightAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // scroll line/page
+  {
+    "key": "ctrl+shift+[KeyI]",
+    "command": "scrollLineUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+[KeyK]",
+    "command": "scrollLineDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+[KeyI]",
+    "command": "scrollPageUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+[KeyK]",
+    "command": "scrollPageDown",
+    "when": "textInputFocus"
+  },
+  // move through eitors/groups
+  {
+    "key": "ctrl+shift+[KeyL]",
+    "command": "workbench.action.nextEditorInGroup"
+    // "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+[KeyJ]",
+    "command": "workbench.action.previousEditorInGroup"
+    // "command": "workbench.action.previousEditor"
+  },
+  {
+    //"key": "ctrl+shift+alt+[KeyL]",
+    "key": "ctrl+[KeyL] ctrl+shift+[KeyL]",
+    "command": "workbench.action.focusNextGroup"
+  },
+  {
+    //"key": "ctrl+shift+alt+[KeyJ]",
+    "key": "ctrl+[KeyJ] ctrl+shift+[KeyJ]",
+    "command": "workbench.action.focusPreviousGroup"
+    // workbench.action.moveEditorToAboveGroup
+  },
+  {
+    "key": "ctrl+[KeyJ] ctrl+alt+[KeyJ]",
+    "command": "workbench.action.moveEditorToPreviousGroup"
+  },
+  {
+    "key": "ctrl+[KeyL] ctrl+alt+[KeyL]",
+    "command": "workbench.action.moveEditorToNextGroup"
+  },
+  // escape -> tilde
+  {
+    "key": "ctrl+[Escape]",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  // cope line up/down
+  {
+    "key": "ctrl+[KeyI] ctrl+shift+[KeyI]",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+[KeyK] ctrl+shift+[KeyK]",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // selectAllSearchEditorMatches"
+  {
+    "key": "ctrl+shift+f",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+[KeyK] ctrl+shift+[KeyI]",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  //tooglePanel
+  {
+    "key": "ctrl+[KeyJ] ctrl+[KeyJ]",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "shift+[Space]",
+    "command": "editor.action.toggleRenderWhitespace"
+  },
+  {
+    "key": "ctrl+[KeyM]",
+    "command": "editor.action.toggleMinimap",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "-mysql.runQuery",
+    "when": "editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+[keyG]",
+    "command": "mysql.runSQL",
+    "when": "editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "-mysql.runAllQuery",
+    "when": "editorLangId == 'sql'"
+  },
+  {
+    "key": "ctrl+o ctrl+o",
+    "command": "workbench.action.files.openFile"
+  }
+  ]
