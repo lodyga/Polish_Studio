@@ -10,7 +10,7 @@ Learned touch typing and tired of moving right hand fingers form `jkl` to &#8592
 Changes `QWERTY` keyboard layout to `STUDIO`. Cursor movement (arrows), selecting, moving, inserting, copying, scorlling, switching, navigating, resizing with `ijkl` (and vicinity) in `VSC` and `Ubuntu`.
 
 ### Core functions
-- `STUDIO` keyboard layout
+- `STUDIO` keyboard layout (Pic. 1)
 - cursor movement (arrows) with `ijkl`
 - selecting characters, lines with `ijkl`
 - Home, End, PageUp, PageDown diagonally to `ijkl` like in numpad
@@ -18,29 +18,30 @@ Changes `QWERTY` keyboard layout to `STUDIO`. Cursor movement (arrows), selectin
 - scrolling, moving and switching VSC editors with `ijkl`
 - manage Ubuntu's `Workspaces` with `Super` and `ijkl`
 - improved `Backspece`
-- additional numeric block at right hand on level 6
+- additional numeric block at right hand on level 5
 - duplicated symbols at left hand on levels 3 and 5
 - Ubuntu, Settings, Region & Language, Manage Installed Languages, Keyboard input method -> XIM (unbinds ctrl+shift+u; unbinding with dconf doesn't work)
 
 ---
-Keyboard Layout for lvl_1, lvl_2 and lvl_3 for left hand.
 ```
-┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
-│Esc  │ !   │ @   │ #   │ $   │ %   │ ^   │ &   │ *   │ (   │ )   │dead │dead ┃Backspace  ┃
-│     │ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │symb.│symb.┃           ┃
-┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
-┃       ┃ Q   │ W   │ F   │ k   │ g   │     │ L   │ U   │ D   │ P   │dead │dead ┃Backspace┃
-┃Tab    ┃ q ' │ w " │ f / │ K \ │ G | │     │ l   │ U   │ d   │ p   │symb.│symb.┃         ┃
-┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺━━━━━━━━━┫
-┃        ┃ Α   │ S   │ T   │Space│Enter│ R   │ N   │ E   │ O   │ I   │BKSP │Enter         ┃
-┃Tab     ┃ a = │ s + │ t - │ _   │     │ r   │ n   │ e   │ o   │ i   │     │              ┃
-┣━━━━━━━━┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━━━━━━━━━━┫
-┃             │ Z   │ X   │ c   │ v   │ b   │ h   │ m   │ y   │ j   │     ┃               ┃
-┃Shift        │ z [ │ x { │ C ( │ V < │ B ~ │ H   │ M   │ Y   │ J   │Shift┃Shift          ┃
-┣━━━━━━━┳━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴────┲┷━━━━━┷━━━━┳┷━━━━━┻┳━━━━━━━┳━━━━━━┫
-┃       ┃       ┃       ┃                              ┃ISO_Level3_┃       ┃       ┃      ┃
-┃Ctrl   ┃Meta   ┃Alt    ┃       ISO_Level5_Shift       ┃Shift      ┃Fn     ┃Meta   ┃Ctrl  ┃
-┗━━━━━━━┻━━━━━━━┻━━━━━━━┹──────────────────────────────┺━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━┛
+Keyboard Layout for lvl_1, lvl_2 and lvl_3 for left hand.
+┏━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
+┃Esc  ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace  ┃
+┃     ┃ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │symb.│symb.┃           ┃
+┣━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
+┃Tab    ┃ Q   │ W   │ F   │ k   │ g   │     │ L   │ U   │ D   │ P   │dead │dead ┃Backspace┃
+┃       ┃ q ' │ w " │ f / │ K \ │ G | │     │ l   │ U   │ d   │ p   │symb.│symb.┃         ┃
+┣━━━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━┫
+┃Tab      ┃ Α   │ S   │ T   │Space│Enter│ R   │ N   │ E   │ O   │ I   │Back ┃Enter        ┃
+┃         ┃ a = │ s + │ t - │ _   │     │ r   │ n   │ e   │ o   │ i   │space┃             ┃
+┣━━━━━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━━━━━┫
+┃Shift      ┃ Z   │ X   │ c   │ v   │ b   │ h   │ m   │ y   │ j   │Shift┃Shift            ┃
+┃           ┃ z [ │ x { │ C ( │ V < │ B ~ │ H   │ M   │ Y   │ J   │     ┃                 ┃
+┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
+┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
+Pic. 1
 ```
 
 ---
