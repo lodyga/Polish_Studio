@@ -141,11 +141,11 @@ xkb_symbols "60c" {
     key <AC03> { [ t,           T,          minus,          NoSymbol,       asterisk,       asterisk,       sacute,         Sacute      ] };
     key <AC04> { [ space,       space,      underscore,     space,          underscore,     space,          nobreakspace,   space       ] };
     key <AC05> { [ Return ] };
-    key <AC06> { [ r,           R,          asciitilde,     grave,          question,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+    key <AC06> { [ r,           R,          asciitilde,     grave,          question,       asterisk,       NoSymbol,       NoSymbol    ] };
     key <AC07> { [ n,           N,          Left,           Left,           4,              equal,          nacute,         Nacute      ] };
     key <AC08> { [ e,           E,          Down,           Down,           5,              plus,           eogonek,        Eogonek     ] };
     key <AC09> { [ o,           O,          Right,          Right,          6,              minus,          oacute,         Oacute      ] };
-    key <AC10> { [ i,           I,          Next,           Next,           NoSymbol,       asterisk,       NoSymbol,       NoSymbol    ] };
+    key <AC10> { [ i,           I,          Next,           Next,           NoSymbol,       underscore,     NoSymbol,       NoSymbol    ] };
     // key <AC11> { [ apostrophe,  quotedbl,   apostrophe,     quotedbl,       apostrophe,     quotedbl,       apostrophe,     quotedbl    ] }; 
 
     key <AB01> { [ z,           Z,          bracketleft,    bracketright,   semicolon,      NoSymbol,       zabovedot,      Zabovedot   ] };

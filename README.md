@@ -4,39 +4,40 @@ Custom keyboad layout that aims to use 40% of keyboard with (at least) 101% effi
 
 
 ## Why do I need it?
-Learned touch typing and tired of moving right hand fingers form `jkl` to &#8592;&#8595;&#8594; constantly? Tired of `QWERTY` layout? That's why!
+Learned touch typing and tired of moving right hand fingers form (physcal) `jkl` to &#8592;&#8595;&#8594; constantly? Tired of `QWERTY` layout? That's why!
 
 ## What does it do?
-Changes `QWERTY` keyboard layout to `STUDIO`. Cursor movement (arrows), selecting, moving, inserting, copying, scorlling, switching, navigating, resizing with `ijkl` (and vicinity) in `VSC` and `Ubuntu`.
+Changes `QWERTY` keyboard layout to `STUDIO` (Pic. 1). Cursor movement (arrows), selecting, moving, inserting, copying, scorlling, switching, navigating, resizing with `ijkl` (and vicinity) in `VSC` and `Ubuntu`.
 
 ### Core functions
 - `STUDIO` keyboard layout (Pic. 1)
-- cursor movement (arrows) with `ijkl`
-- selecting characters, lines with `ijkl`
-- Home, End, PageUp, PageDown diagonally to `ijkl` like in numpad
+- cursor controll (Arrow Keys) with `ijkl` (Pic. 2)
+- selecting characters, lines with `ijkl` (Pic. 3)
+- Home, End, PageUp, PageDown diagonally to `ijkl` like in numpad  (Pic. 2)
 - moving, copying lines with in VSC `ijkl`
 - scrolling, moving and switching VSC editors with `ijkl`
 - manage Ubuntu's `Workspaces` with `Super` and `ijkl`
 - improved `Backspece`
-- additional numeric block at right hand on level 5
-- duplicated symbols at left hand on levels 3 and 5
-- Ubuntu, Settings, Region & Language, Manage Installed Languages, Keyboard input method -> XIM (unbinds ctrl+shift+u; unbinding with dconf doesn't work)
+- `numeric block` at right hand on level 5 (Pic. 4)
+- most `symbols` at left hand on levels 3 and 5 (Pic. 2, 3, 4)
+<!---movement--->
 
 ---
+
 ```
-Keyboard Layout for lvl_1, lvl_2 and lvl_3 for left hand.
+Keyboard Layout for lvl_1 and lvl_2.
 ┏━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
 ┃Esc  ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace  ┃
-┃     ┃ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │symb.│symb.┃           ┃
+┃     ┃     │     │     │     │     │     │     │     │     │     │symb.│symb.┃           ┃
 ┣━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
 ┃Tab    ┃ Q   │ W   │ F   │ k   │ g   │     │ L   │ U   │ D   │ P   │dead │dead ┃Backspace┃
-┃       ┃ q ' │ w " │ f / │ K \ │ G | │     │ l   │ U   │ d   │ p   │symb.│symb.┃         ┃
-┣━━━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━┫
-┃Tab      ┃ Α   │ S   │ T   │Space│Enter│ R   │ N   │ E   │ O   │ I   │Back ┃Enter        ┃
-┃         ┃ a = │ s + │ t - │ _   │     │ r   │ n   │ e   │ o   │ i   │space┃             ┃
-┣━━━━━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━━━━━┫
+┃       ┃ q   │ w   │ f   │ K   │ G   │     │ l   │ U   │ d   │ p   │symb.│symb.┃         ┃
+┣━━━━━━━┻━┱───┴─┬───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━┫
+┃Tab      ┃ Α   │ S   │ T   ┃Space┃Enter│ R   ┃ N   ┃ E   │ O   │ I   │Back ┃Enter        ┃
+┃         ┃ a   │ s   │ t   ┃     ┃     │ r   ┃ n   ┃ e   │ o   │ i   │space┃             ┃
+┣━━━━━━━━━┻━┱───┴─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━━━━━┫
 ┃Shift      ┃ Z   │ X   │ c   │ v   │ b   │ h   │ m   │ y   │ j   │Shift┃Shift            ┃
-┃           ┃ z [ │ x { │ C ( │ V < │ B ~ │ H   │ M   │ Y   │ J   │     ┃                 ┃
+┃           ┃ z   │ x   │ C   │ V   │ B   │ H   │ M   │ Y   │ J   │     ┃                 ┃
 ┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
 ┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
 ┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
@@ -45,6 +46,97 @@ Pic. 1
 ```
 
 ---
+
+```
+Keyboard Layout for lvl_3.
+┏━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
+┃Esc  ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace  ┃
+┃     ┃     │     │     │     │     │     │     │     │     │     │symb.│symb.┃           ┃
+┣━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
+┃Tab    ┃     │     │     │     │     │     │Home │ Up  │Page │     │dead │dead ┃Backspace┃
+┃       ┃  '  │  "  │  /  │  \  │  |  │     │     │     │ Up  │     │symb.│symb.┃         ┃
+┣━━━━━━━┻━┱───┴─┬───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━┫
+┃Tab      ┃     │     │     ┃     ┃     │     ┃Left ┃Down │Right│Page │Back ┃Enter        ┃
+┃         ┃  =  │  +  │  -  ┃  _  ┃     │     ┃     ┃     │     │Down │space┃             ┃
+┣━━━━━━━━━┻━┱───┴─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━━━━━┫
+┃Shift      ┃     │     │     │     │     │Home │ End │Down │Page │Shift┃Shift            ┃
+┃           ┃  [  │  {  │  (  │  <  │  ~  │     │     │     │Down │     ┃                 ┃
+┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
+┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
+Pic. 2
+```
+---
+
+```
+Keyboard Layout for lvl_4.
+┏━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
+┃Esc  ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace  ┃
+┃     ┃     │     │     │     │     │     │     │     │     │     │symb.│symb.┃           ┃
+┣━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
+┃Tab    ┃     │     │     │     │     │     │Home │ Up  │Page │     │dead │dead ┃Backspace┃
+┃       ┃     │     │     │     │     │     │     │     │ Up  │     │symb.│symb.┃         ┃
+┣━━━━━━━┻━┱───┴─┬───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━┫
+┃Tab      ┃     │     │     ┃     ┃     │     ┃Left ┃Down │Right│Page │Back ┃Enter        ┃
+┃         ┃     │     │     ┃     ┃     │     ┃     ┃     │     │Down │space┃             ┃
+┣━━━━━━━━━┻━┱───┴─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━━━━━┫
+┃Shift      ┃     │     │     │     │     │Home │ End │Down │Page │Shift┃Shift            ┃
+┃           ┃  ]  │  }  │  )  │  >  │  `  │     │     │     │Down │     ┃                 ┃
+┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
+┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
+Pic. 3
+```
+---
+
+```
+Keyboard Layout for lvl_5.
+┏━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
+┃Esc  ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace  ┃
+┃     ┃     │     │     │     │     │     │     │     │     │     │symb.│symb.┃           ┃
+┣━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
+┃Tab    ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace┃
+┃       ┃  !  │  @  │  #  │  $  │  %  │     │  7  │  8  │  9  │  0  │symb.│symb.┃         ┃
+┣━━━━━━━┻━┱───┴─┬───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━┫
+┃Tab      ┃     │     │     ┃     ┃     │     ┃     ┃     │     │     │Back ┃Enter        ┃
+┃         ┃  ^  │  &  │  *  ┃  _  ┃     │     ┃  4  ┃  5  │  6  │     │space┃             ┃
+┣━━━━━━━━━┻━┱───┴─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━━━━━┫
+┃Shift      ┃     │     │     │     │     │     │     │     │     │Shift┃Shift            ┃
+┃           ┃  ;  │  :  │  ,  │  .  │  ?  │  0  │  1  │  2  │  3  │     ┃                 ┃
+┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
+┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
+Pic. 4
+```
+
+---
+
+```
+Keyboard Layout for lvl_6. 
+┏━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
+┃Esc  ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace  ┃
+┃     ┃     │     │     │     │     │     │     │     │     │     │symb.│symb.┃           ┃
+┣━━━━━┻━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
+┃Tab    ┃     │     │     │     │     │     │     │     │     │     │dead │dead ┃Backspace┃
+┃       ┃  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │symb.│symb.┃         ┃
+┣━━━━━━━┻━┱───┴─┬───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┲━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━┫
+┃Tab      ┃     │     │     ┃     ┃     │     ┃     ┃     │     │     │Back ┃Enter        ┃
+┃         ┃     │     │     ┃     ┃     │  *  ┃  =  ┃  +  │  -  │  _  │space┃             ┃
+┣━━━━━━━━━┻━┱───┴─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┺━┯━━━┹─┬───┴─┬───┴─┬───┴─┲━━━┻━━━━━━━━━━━━━┫
+┃Shift      ┃     │     │     │     │     │     │     │     │     │Shift┃Shift            ┃
+┃           ┃     │     │     │     │     │     │  %  │  ,  │  .  │     ┃                 ┃
+┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
+┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
+Pic. 5
+```
+
+---
+
 **Modifier levels**
 level|lvl_1|lvl_2|lvl_3|lvl_4|lvl_5|lvl_6|lvl_7|lvl_8
 -:|:-|:-|:-|:-|:-|:-|:-|:-
@@ -100,6 +192,7 @@ modifier|none|shift|lvl_3|shift+lvl_3|lvl_5|shift+lvl_5|lvl_3+lvl_5|shift+lvl_3+
 - install `line-jumper` (in VSC <ctrl+shift+x>) 
 - install `dconf` with ubuntu software and apply files from dconf folder
 - install `Tweaks` with `sudo apt install gnome-tweak-tool`
+- Ubuntu, Settings, Region & Language, Manage Installed Languages, Keyboard input method -> XIM (unbinds ctrl+shift+u; unbinding with dconf doesn't work)
 <!---copy pl file to xkb folder; add paste update--->
 
 
