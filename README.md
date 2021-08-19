@@ -39,7 +39,7 @@ Keyboard Layout for lvl_1 and lvl_2.
 ┃Shift      ┃ Z   │ X   │ c   │ v   │ b   │ h   │ m   │ y   │ j   │Shift┃Shift            ┃
 ┃           ┃ z   │ x   │ C   │ V   │ B   │ H   │ M   │ Y   │ J   │     ┃                 ┃
 ┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
-┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Ctrl ┃Ctrl   ┃
 ┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
 ┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
 Pic. 1
@@ -62,7 +62,7 @@ Keyboard Layout for lvl_3.
 ┃Shift      ┃     │     │     │     │     │Home │ End │Down │Page │Shift┃Shift            ┃
 ┃           ┃  [  │  {  │  (  │  <  │  ~  │     │     │     │Down │     ┃                 ┃
 ┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
-┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Ctrl ┃Ctrl   ┃
 ┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
 ┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
 Pic. 2
@@ -84,7 +84,7 @@ Keyboard Layout for lvl_4.
 ┃Shift      ┃     │     │     │     │     │Home │ End │Down │Page │Shift┃Shift            ┃
 ┃           ┃  ]  │  }  │  )  │  >  │  `  │     │     │     │Down │     ┃                 ┃
 ┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
-┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Ctrl ┃Ctrl   ┃
 ┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
 ┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
 Pic. 3
@@ -106,7 +106,7 @@ Keyboard Layout for lvl_5.
 ┃Shift      ┃     │     │     │     │     │     │     │     │     │Shift┃Shift            ┃
 ┃           ┃  ;  │  :  │  ,  │  .  │  ?  │  0  │  1  │  2  │  3  │     ┃                 ┃
 ┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
-┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Ctrl ┃Ctrl   ┃
 ┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
 ┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
 Pic. 4
@@ -129,7 +129,7 @@ Keyboard Layout for lvl_6.
 ┃Shift      ┃     │     │     │     │     │     │     │     │     │Shift┃Shift            ┃
 ┃           ┃     │     │     │     │     │     │  %  │  ,  │  .  │     ┃                 ┃
 ┣━━━━━━━┳━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━┷━━━┳━┻━━━┳━━━━━┳━━━━━━━┫
-┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Meta ┃Ctrl   ┃
+┃Ctrl   ┃Meta ┃Alt    ┃          ISO_Level5_Shift         ┃ISO_Level3_┃Fn   ┃Ctrl ┃Ctrl   ┃
 ┃       ┃     ┃       ┃                                   ┃Shift      ┃     ┃     ┃       ┃
 ┗━━━━━━━┻━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━━━━━┻━━━━━┻━━━━━┻━━━━━━━┛
 Pic. 5
@@ -341,6 +341,35 @@ ctrl+° ctrl+shift+°|-
 -:|-
 j|previous Group
 l|next Group
+
+---
+
+## switch editor (focus)
+**switch within goup** [vsc]
+alt+meta|-
+-:|:-
+m|1st editor In Group
+,|2nd editor In Group
+.|3rd editor In Group
+
+---
+
+## switch group (focus)
+**switch group** [vsc]
+ctrl+meta|-
+-:|-
+m|1st Group
+,|2nd Group
+.|3rd Group
+
+---
+
+## switch bar (focus)
+**switch bar** [vsc]
+ctrl+meta|-
+-:|-
+n|Side Bar
+p|Activity Bar
 
 ---
 

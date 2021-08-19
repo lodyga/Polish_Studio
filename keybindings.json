@@ -269,5 +269,213 @@
   {
     "key": "ctrl+o ctrl+o",
     "command": "workbench.action.files.openFile"
+  },
+  {
+    "key": "[keyG]",
+      "command": "acceptSelectedSuggestion",
+      "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+  },
+  // Bind ESC to Backquote
+  {
+    "key": "[Backquote]",
+    "command": "editor.action.cancelSelectionAnchor",
+    "when": "editorTextFocus && selectionAnchorSet"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "editor.debug.action.closeExceptionWidget",
+    "when": "exceptionWidgetVisible"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "workbench.action.hideInterfaceOverview",
+    "when": "interfaceOverviewVisible"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "notebook.cell.quitEdit",
+    "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "notifications.hideList",
+    "when": "notificationCenterVisible"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "settings.action.clearSearchResults",
+    "when": "inSettingsEditor && inSettingsSearch"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "settings.action.focusLevelUp",
+    "when": "inSettingsEditor && !inSettingsJSONEditor && !inSettingsSearch"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "search.action.focusQueryEditorWidget",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "search.action.cancel",
+    "when": "listFocus && searchViewletVisible && !inputFocus && searchState != '0'"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "workbench.action.terminal.clearSelection",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected && !terminalFindVisible"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "workbench.action.terminal.navigationModeExit",
+    "when": "accessibilityModeEnabled && terminalA11yTreeFocus && terminalProcessSupported"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "workbench.action.terminal.hideFind",
+    "when": "terminalFindVisible && terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "welcome.goBack",
+    "when": "inWelcome && activeEditor == 'gettingStartedPage'"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "editor.action.inlineSuggest.hide",
+    "when": "inlineSuggestionVisible"
+  },
+  // bind enter to g
+  {
+    "key": "[keyG]",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+  {
+    "key": "[keyG]",
+    "command": "notebook.cell.edit",
+    "when": "notebookCellListFocused && notebookEditable && !inputFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "repl.action.acceptInput",
+    "when": "inDebugRepl && textInputFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "workbench.action.terminal.findPrevious",
+    "when": "terminalFindFocused && terminalProcessSupported"
+  },
+  {
+    "key": "[keyG]",
+    "command": "acceptRenameInput",
+    "when": "editorFocus && renameInputVisible"
+  },
+  {
+    "key": "[keyG]",
+    "command": "breadcrumbs.selectFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "[keyG]",
+    "command": "breakpointWidget.action.acceptInput",
+    "when": "breakpointWidgetVisible && inBreakpointWidget"
+  },
+  {
+    "key": "[keyG]",
+    "command": "editor.action.extensioneditor.findNext",
+    "when": "webviewFindWidgetFocused && !editorFocus && activeEditor == 'workbench.editor.extension'"
+  },
+  {
+    "key": "[keyG]",
+    "command": "editor.action.replaceOne",
+    "when": "editorFocus && findWidgetVisible && replaceInputFocussed"
+  },
+  {
+    "key": "[keyG]",
+    "command": "editor.action.webvieweditor.findNext",
+    "when": "webviewFindWidgetFocused && !editorFocus && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "[keyG]",
+    "command": "explorer.openAndPassFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "keybindings.editor.defineKeybinding",
+    "when": "inKeybindings && keybindingFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "notification.toggle",
+    "when": "notificationFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "problems.action.open",
+    "when": "problemFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "revealReference",
+    "when": "listFocus && referenceSearchVisible && !inputFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "search.action.openResult",
+    "when": "fileMatchOrMatchFocus && searchViewletVisible"
+  },
+  {
+    "key": "[keyG]",
+    "command": "settings.action.focusSettingControl",
+    "when": "settingRowFocus"
+  },
+  {
+    "key": "[keyG]",
+    "command": "settings.action.focusSettingsList",
+    "when": "inSettingsEditor && settingsTocRowFocus"
+  },
+  // Focus on editors, groups and bars
+  // openEditor
+  {
+    "key": "alt+meta+[keyM]",
+    "command": "workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "alt+meta+[Comma]",
+    "command": "workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "alt+meta+[Period]",
+    "command": "workbench.action.openEditorAtIndex3"
+  },
+  // focusEditorGroup
+  {
+    "key": "ctrl+meta+[keyM]",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+meta+[Comma]",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "ctrl+meta+[Period]",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  // focus on bars
+  {
+    "key": "ctrl+meta+[keyN]",
+    "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "ctrl+meta+[keyP]",
+    "command": "workbench.action.focusActivityBar"
   }
-  ]
+]

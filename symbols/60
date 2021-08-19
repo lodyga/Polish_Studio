@@ -164,7 +164,7 @@ xkb_symbols "60c" {
     key <AC11> { [ BackSpace] };
     key <ESC>  { [ Escape   ] };
     key <TLDE> { [ Escape   ] };
-    key <MENU> { [ Super_L  ] };
+    // key <MENU> { [ Super_L  ] };
     key <SPCE> { [ ISO_Level5_Shift ] };
     key <CAPS> { [ Tab ] };
     key <BKSL>	{ [ BackSpace] };
@@ -173,6 +173,7 @@ xkb_symbols "60c" {
     include "level3(ralt_switch)"
     include "level5(modifier_mapping)"
     include "shift(both_capslock)"
+    include "ctrl(menu_rctrl)"
 };
 
 
