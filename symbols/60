@@ -126,7 +126,7 @@ xkb_symbols "60c" {
     key <AD03> { [ f,           F,          slash,          NoSymbol,       numbersign,     3,              NoSymbol,       NoSymbol    ] };
     key <AD04> { [ k,           K,          backslash,      NoSymbol,       dollar,         4,              NoSymbol,       NoSymbol    ] };    
     key <AD05> { [ g,           G,          bar,            NoSymbol,       percent,        5,              NoSymbol,       NoSymbol    ] };
-    key <AD06> { [ NoSymbol,    NoSymbol,   NoSymbol,       NoSymbol,       asciicircum,    6,              NoSymbol,       NoSymbol    ] };
+    key <AD06> { [ NoSymbol,    Caps_Lock,  NoSymbol,       NoSymbol,       asciicircum,    6,              NoSymbol,       NoSymbol    ] };
     key <AD07> { [ l,           L,          Home,           Home,           7,              7,              lstroke,        Lstroke     ] };
     key <AD08> { [ u,           U,          Up,             Up,             8,              8,              NoSymbol,       NoSymbol    ] };
     key <AD09> { [ d,           D,          Prior,          Prior,          9,              9,              NoSymbol,       NoSymbol    ] };
@@ -160,6 +160,7 @@ xkb_symbols "60c" {
     // key <AB10> { [ BackSpace,   BackSpace,  NoSymbol,       NoSymbol,       slash,          question,       NoSymbol,       NoSymbol    ] }; 
 
     key.type[Group1] = "ONE_LEVEL";
+//    key <AD06> { [ Caps_Lock ] };
     key <AB10> { [ Shift_L  ] };
     key <AC11> { [ BackSpace] };
     key <ESC>  { [ Escape   ] };
@@ -168,11 +169,12 @@ xkb_symbols "60c" {
     key <SPCE> { [ ISO_Level5_Shift ] };
     key <CAPS> { [ Tab ] };
     key <BKSL>	{ [ BackSpace] };
+    modifier_map Lock { Caps_Lock };
     
     include "kpdl(comma)"
     include "level3(ralt_switch)"
     include "level5(modifier_mapping)"
-    include "shift(both_capslock)"
+    // include "shift(both_capslock)"
     include "ctrl(menu_rctrl)"
 };
 

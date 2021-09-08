@@ -192,6 +192,7 @@ modifier|none|shift|lvl_3|shift+lvl_3|lvl_5|shift+lvl_5|lvl_3+lvl_5|shift+lvl_3+
 - install `line-jumper` (in VSC <ctrl+shift+x>) 
 - install `dconf` with ubuntu software and apply files from dconf folder
 - install `Tweaks` with `sudo apt install gnome-tweak-tool`
+- install `Center Editor Window` with VSC's Ctrl+P -> ext install kaiwood.center-editor-window
 - Ubuntu, Settings, Region & Language, Manage Installed Languages, Keyboard input method -> XIM (unbinds ctrl+shift+u; unbinding with dconf doesn't work)
 <!---copy pl file to xkb folder; add paste update--->
 
@@ -258,6 +259,19 @@ o|page up
 . or ;|page down
 u or n|beggining of line
 m|end of line
+
+---
+
+**select line at cursor** [vsc]
+
+ctrl+alt+l
+
+---
+
+## view
+**center view at cursor** [Center Editor Window]
+
+ctrl+l
 
 ---
 
@@ -403,6 +417,11 @@ m|navigate forward
 
 ---
 
+**Center Editor Window** [by Kai Wood]
+- ctrl+l
+
+---
+
 ## Delete merged with Backapece
 **delte characters, words, lines in either direction** [vsc]
 bksp|-|shift
@@ -438,13 +457,13 @@ ctrl+k ctrl+shift+i|format document
 ctrl+shift+f|select highlights
 ctrl+shift+4|terminal.kill
 alt_gr+,|down
-Caps_Lock|ISO_Level5_Shift
-Backslash|ISO_Level5_Shift
+Caps_Lock|as TAB (in most cases)
+Tilde|as ESC (in most cases)
 
 Caps_Lock|Switch
 -:|:-
-shift_L+shift_P|On/Off
-shift_P+shift_L|On/Off
+shift+y|On
+y|Off
 
 
 ---

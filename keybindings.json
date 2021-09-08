@@ -1,16 +1,34 @@
+/*
+Context name    True when
+Editor contexts	
+editorFocus	    An editor has focus, either the text or a widget.
+editorTextFocus	The text in an editor has focus (cursor is blinking).
+textInputFocus	Any editor has focus (regular editor, debug REPL, etc.).
+inputFocus	    Any text input area has focus (editors or text boxes).
+Developer: Toggle Keyboard Shortcuts Troubleshooting
+
+The following keys are accepted:
+f1-f19, a-z, 0-9
+`, -, =, [, ], \, ;, ', ,, ., /
+left, up, right, down, pageup, pagedown, end, home
+tab, enter, escape, space, backspace, delete
+pausebreak, capslock, insert
+numpad0-numpad9, numpad_multiply, numpad_add, numpad_separator
+numpad_subtract, numpad_decimal, numpad_divide
+
+Accepted scan codes:
+[F1]-[F19], [KeyA]-[KeyZ], [Digit0]-[Digit9]
+[Backquote], [Minus], [Equal], [BracketLeft], [BracketRight], [Backslash], [Semicolon], [Quote], [Comma], [Period], [Slash]
+[ArrowLeft], [ArrowUp], [ArrowRight], [ArrowDown], [PageUp], [PageDown], [End], [Home]
+[Tab], [Enter], [Escape], [Space], [Backspace], [Delete]
+[Pause], [CapsLock], [Insert]
+[Numpad0]-[Numpad9], [NumpadMultiply], [NumpadAdd], [NumpadComma]
+[NumpadSubtract], [NumpadDecimal], [NumpadDivide]
+
+*/
+
+
 [
-  {
-    "key": "ctrl+[Tab]",
-    "command": "workbench.action.nextEditorInGroup"
-    // "command": "workbench.action.nextEditor"
-    // "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
-  },
-  {
-    "key": "ctrl+shift+[Tab]",
-    "command": "workbench.action.previousEditorInGroup"
-    // "command": "workbench.action.previousEditor"
-    // "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
-  },
   {
     "key": "ctrl+shift+[Digit4]",
     "command": "workbench.action.terminal.kill"
@@ -28,19 +46,16 @@
     //"command": "deleteWordEndRight",
     "when": "textInputFocus && !editorReadonly"
   },
-  // delete line
   {
     "key": "alt+[Backspace]",
     "command": "editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
   },
-  // delete word
   {
     "key": "shift+alt+[Backspace]",
     "command": "deleteInsideWord",
     "when": "textInputFocus && !editorReadonly"
   },
-  // Delete all left
   {
     "key": "ctrl+alt+[Backspace]",
     "command": "deleteAllLeft",
@@ -207,9 +222,19 @@
     "when": "terminal.active"
   },
   {
-    "key": "ctrl+`",
+    "key": "ctrl+[Backquote]",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible && !isComposing"
+  },
+  {
+    "key": "[Backquote]",
+    "command": "editor.debug.action.closeExceptionWidget",
+    "when": "exceptionWidgetVisible"
   },
   // cope line up/down
   {
@@ -229,6 +254,7 @@
     "when": "editorFocus"
   },
   {
+    //"key": "ctrl+[KeyK] ctrl+shift+[KeyI]",
     "key": "ctrl+[KeyK] ctrl+shift+[KeyI]",
     "command": "editor.action.formatDocument",
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
@@ -252,8 +278,8 @@
     "command": "-workbench.action.files.newUntitledFile"
   },
   {
-    "key": "ctrl+alt+e",
-    "command": "-mysql.runQuery",
+    "key": "shift+[keyG]",
+    "command": "mysql.runQuery",
     "when": "editorLangId == 'sql'"
   },
   {
@@ -272,10 +298,10 @@
   },
   {
     "key": "[keyG]",
-      "command": "acceptSelectedSuggestion",
-      "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+    "command": "acceptSelectedSuggestion",
+    "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
   },
-  // Bind ESC to Backquote
+// Bind ESC to Backquote
   {
     "key": "[Backquote]",
     "command": "editor.action.cancelSelectionAnchor",
@@ -442,6 +468,11 @@
     "command": "settings.action.focusSettingsList",
     "when": "inSettingsEditor && settingsTocRowFocus"
   },
+  {
+    "key": "ctrl+shift+[KeyG]",
+    "command": "editor.action.insertLineBefore",
+    "when": "editorTextFocus && !editorReadonly"
+  },
   // Focus on editors, groups and bars
   // openEditor
   {
@@ -455,6 +486,18 @@
   {
     "key": "alt+meta+[Period]",
     "command": "workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "alt+meta+[keyJ]",
+    "command": "workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "alt+meta+[keyK]",
+    "command": "workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "alt+meta+[keyL]",
+    "command": "workbench.action.openEditorAtIndex6"
   },
   // focusEditorGroup
   {
@@ -477,5 +520,299 @@
   {
     "key": "ctrl+meta+[keyP]",
     "command": "workbench.action.focusActivityBar"
+  },
+  {
+    "key": "ctrl+shift+[keyB]",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  // tab on capslock
+  {
+    "key": "[CapsLock]",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionVisible && !editorTabMovesFocus && !inlineSuggestionHasIndentation"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "insertBestCompletion",
+    "when": "atEndOfWord && textInputFocus && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "insertNextSuggestion",
+    "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "insertSnippet",
+    "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "jumpToNextSnippetPlaceholder",
+    "when": "editorTextFocus && hasNextTabstop && inSnippetMode"
+  },
+  {// problem, bo CapsLock ma być tabem, ale keyY jest wtedy capslockiem i tabem; myli [keyY] z [CapsLock]
+    "key": "CapsLock",
+    "command": "tab",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "ctrl+[CapsLock]",
+    "command": "workbench.action.nextEditorInGroup"
+    // "command": "workbench.action.nextEditor"
+    // "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
+  },
+  {
+    "key": "ctrl+shift+[CapsLock]",
+    "command": "workbench.action.previousEditorInGroup"
+    // "command": "workbench.action.previousEditor"
+    // "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "shift+[CapsLock]",
+    "command": "acceptAlternativeSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus && textInputFocus"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionVisible && !editorTabMovesFocus && !inlineSuggestionHasIndentation"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "insertSnippet",
+    "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "[CapsLock]",
+    "command": "jumpToNextSnippetPlaceholder",
+    "when": "editorTextFocus && hasNextTabstop && inSnippetMode"
+  },
+  {
+    "key": "shift+[CapsLock]",
+    "command": "jumpToPrevSnippetPlaceholder",
+    "when": "editorTextFocus && hasPrevTabstop && inSnippetMode"
+  },
+  // python
+  {
+    "key": "shift+[keyG]",
+    "command": "python.execSelectionInTerminal",
+    "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+  },
+  // select line
+  {
+    "key": "ctrl+alt+[keyU]",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
   }
 ]
+
+
+  /*
+    {
+      "key": "ctrl+enter",
+      "command": "mysql.runQuery",
+      "when": "editorLangId == 'sql'"
+    },
+    ,
+    {
+      "key": "ctrl+[KeyK] j",
+      "command": "-deleteWordStartLeft"
+    }
+  
+  
+      // F
+      {
+        "key": "ctrl+shift+1",
+        "command": "workbench.action.showCommands"
+      },
+      {
+        "key": "ctrl+alt+1",
+        "command": "workbench.action.showCommands"
+      },
+      {
+        "key": "shift+alt+1",
+        "command": "workbench.action.showCommands"
+      },
+      {
+        "key": "ctrl+shift+2",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+alt+2",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift+alt+2",
+        "command": "editor.action.rename",
+        "when": "editorHasRen[ameProvider && editorTextFocus && !editorReadonly"
+      }
+    */
+  /* arrow + shift in esdf
+      {
+        "key": "shift+alt+e",
+        "command": "cursorColumnSelectUp",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift+alt+d",
+        "command": "cursorColumnSelectDown",
+        "when": "editorTextFocus && !editorReadonly"
+      }, 
+      {
+        "key": "shift+alt+a",
+        "command": "cursorColumnSelectLeft",
+        "when": "editorTextFocus && !editorReadonly"
+      }, 
+      {
+        "key": "shift+alt+f",
+        "command": "cursorColumnSelectRight",
+        "when": "editorTextFocus && !editorReadonly"
+      }
+    */
+  /*
+      {
+        "key": "`",
+        "command": "escape"
+      },
+      
+      {
+        "key": "`",
+        "command": "type",
+        "args": { "text": "Hello World" },
+        "when": "editorTextFocus"
+      }
+  
+      // remove some alt lineJumpers
+      {
+        "key": "alt+down",
+        "command": "-lineJumper.moveDown",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "alt+up",
+        "command": "-lineJumper.moveUp",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+alt+down",
+        "command": "-lineJumper.selectDown",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+alt+up",
+        "command": "-lineJumper.selectUp",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      // problemy z tm są bo raz działa raz nie
+      {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      // testing area
+      // test ctrl+shift+alt+alt_gr
+      // doesnt work
+      {
+        "key": "ctrl+shift+alt+pageup",
+        "command": "-scrollLineUp",
+        "when": "textInputFocus"
+      },
+      {
+        "key": "ctrl+shift+alt+pagedown",
+        "command": "-scrollLineDown",
+        "when": "textInputFocus"
+      },
+      {
+        "key": "ctrl+shift+alt+home",
+        "command": "-scrollLineUp",
+        "when": "textInputFocus"
+      },
+      {
+        "key": "ctrl+shift+alt+end",
+        "command": "-scrollLineDown",
+        "when": "textInputFocus"
+      },
+      // test ctrl+alt+alt_gr
+      {
+        "key": "ctrl+alt+pageup",
+        "command": "-scrollLineUp",
+        "when": "textInputFocus"
+      },
+      {
+        "key": "ctrl+alt+pagedown",
+        "command": "-scrollLineDown",
+        "when": "textInputFocus"
+      },
+      {
+        "key": "ctrl+alt+home",
+        "command": "-scrollLineUp",
+        "when": "textInputFocus"
+      },
+      // only one works
+      {
+        "key": "ctrl+alt+end",
+        "command": "-scrollLineDown",
+        "when": "textInputFocus"
+      },
+    
+    // unbind to not repeat
+    {
+      "key": "ctrl+alt+left",
+      "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+      "key": "ctrl+alt+right",
+      "command": "-workbench.action.moveEditorToNextGroup"
+    },
+  
+      // super(meta) (+shift) with arrows to hep (home end page)
+  
+      {
+        "key": "meta+up",
+        "command": "cursor",
+        "when": "lineJumper.moveUp"
+      },
+      {
+        "key": "meta+down",
+        "command": "cursor",
+        "when": "lineJumper.moveDown"
+      },
+      {
+        "key": "meta+shift+up",
+        "command": "lineJumper.selectUp",
+        "when": "textInputFocus"
+      },
+      {
+        "key": "meta+shift+down",
+        "command": "lineJumper.selectDown",
+        "when": "textInputFocus"
+      },
+    */
