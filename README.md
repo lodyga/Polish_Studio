@@ -387,6 +387,15 @@ p|Activity Bar
 
 ---
 
+## toogle bar
+**toogle bar** [vsc]
+-|-
+-|-
+ctrl+b|Side Bar
+ctrl+shift+b|Activity Bar
+
+---
+
 ## move editor 
 **move editor within/without goup** [vsc]
 ctrl+shift+alt_gr|-

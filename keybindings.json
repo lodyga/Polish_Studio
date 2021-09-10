@@ -521,6 +521,7 @@ Accepted scan codes:
     "key": "ctrl+meta+[keyP]",
     "command": "workbench.action.focusActivityBar"
   },
+  // toogle bars
   {
     "key": "ctrl+shift+[keyB]",
     "command": "workbench.action.toggleActivityBarVisibility"
