@@ -171,7 +171,7 @@ modifier|none|shift|lvl_3|shift+lvl_3|lvl_5|shift+lvl_5|lvl_3+lvl_5|shift+lvl_3+
     // ;:,.?            0123
 
     // lvl_7
-    // diacritics
+    // diacritics + nobreakspace
 
     // lvl_8
     // DIACRITICS
@@ -264,14 +264,14 @@ m|end of line
 
 **select line at cursor** [vsc]
 
-ctrl+alt+l
+ctrl+alt+o
 
 ---
 
 ## view
 **center view at cursor** [Center Editor Window]
 
-ctrl+l
+ctrl+u
 
 ---
 

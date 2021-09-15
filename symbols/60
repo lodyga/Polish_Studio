@@ -139,7 +139,7 @@ xkb_symbols "60c" {
     key <AC01> { [ a,           A,          equal,          NoSymbol,       asciicircum,    asciicircum,    aogonek,        Aogonek     ] };
     key <AC02> { [ s,           S,          plus,           NoSymbol,       ampersand,      ampersand,      sacute,         Sacute      ] };
     key <AC03> { [ t,           T,          minus,          NoSymbol,       asterisk,       asterisk,       sacute,         Sacute      ] };
-    key <AC04> { [ space,       space,      underscore,     space,          underscore,     space,          nobreakspace,   space       ] };
+    key <AC04> { [ space,       space,      underscore,     space,          space,          space,          nobreakspace,   space       ] };
     key <AC05> { [ Return ] };
     key <AC06> { [ r,           R,          asciitilde,     grave,          question,       asterisk,       NoSymbol,       NoSymbol    ] };
     key <AC07> { [ n,           N,          Left,           Left,           4,              equal,          nacute,         Nacute      ] };

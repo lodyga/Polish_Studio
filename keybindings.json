@@ -622,7 +622,7 @@ Accepted scan codes:
   },
   // select line
   {
-    "key": "ctrl+alt+[keyU]",
+    "key": "ctrl+alt+[keyO]",
     "command": "expandLineSelection",
     "when": "textInputFocus"
   }
