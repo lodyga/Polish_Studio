@@ -508,7 +508,17 @@ k|unmaximize
 j|toggle tiled left
 l|toggle tiled right
 
+---
 
+# From TypingClub
+![5stars](img/5stars.png "5stars")
+5 start progress.
+
+![platinum](img/platinum.png "platinum")
+Platinum progress.
+
+---
 
 # Credits
 Łukasz Łodożyński <lodyga@o2.pl>
+
