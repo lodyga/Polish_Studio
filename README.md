@@ -1,6 +1,6 @@
----
-For some reason most of tables on git are broken.
----
+```diff
+- For some reason most of tables on git are broken.
+```
 
 # Intro
 ## What is this?
@@ -520,6 +520,9 @@ l|toggle tiled right
 
 ![platinum](img/platinum.png "platinum")
 Platinum progress.
+
+![wpm](img/wpm.png "wpm")
+Wpm progress.
 
 ---
 
