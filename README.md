@@ -1,7 +1,3 @@
-```diff
-- For some reason most of tables on git are broken.
-```
-
 # Intro
 ## What is this?
 Custom keyboad layout that aims to use 40% of keyboard with (at least) 101% efficiency. Made for VSC 1.57.0 on Ubuntu 20.04.2 LTS.
