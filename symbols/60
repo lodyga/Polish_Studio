@@ -98,7 +98,7 @@ xkb_symbols "60c" {
     // lvl_5
     // left hand         right hand
     // !@#$%             7890
-    // ^&*_              456
+    // ^&*_              4560
     // ;:,.?            0123
 
     // lvl_6
@@ -145,7 +145,7 @@ xkb_symbols "60c" {
     key <AC07> { [ n,           N,          Left,           Left,           4,              equal,          nacute,         Nacute      ] };
     key <AC08> { [ e,           E,          Down,           Down,           5,              plus,           eogonek,        Eogonek     ] };
     key <AC09> { [ o,           O,          Right,          Right,          6,              minus,          oacute,         Oacute      ] };
-    key <AC10> { [ i,           I,          Next,           Next,           NoSymbol,       underscore,     NoSymbol,       NoSymbol    ] };
+    key <AC10> { [ i,           I,          Next,           Next,           0,              underscore,     NoSymbol,       NoSymbol    ] };
     // key <AC11> { [ apostrophe,  quotedbl,   apostrophe,     quotedbl,       apostrophe,     quotedbl,       apostrophe,     quotedbl    ] }; 
 
     key <AB01> { [ z,           Z,          bracketleft,    bracketright,   semicolon,      NoSymbol,       zabovedot,      Zabovedot   ] };
