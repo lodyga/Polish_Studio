@@ -1,9 +1,9 @@
 partial
-xkb_symbols "60c" {
+xkb_symbols "studio" {
 
     // Contact: Łukasz Łodożyński <lodyga@o2.pl>
 
-    include "60(60c)"
+    include "60(basic)"
 
     name[Group1]="Polish (Studio)";
 };
