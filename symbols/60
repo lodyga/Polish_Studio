@@ -19,7 +19,7 @@ xkb_symbols "basic" {
 
     // lvl_4
     //
-    // ≠
+    // ≠ –
     // ]})>`
 
     // lvl_5
@@ -75,7 +75,7 @@ xkb_symbols "basic" {
     
     key <AC01> { [ a,           A,              equal,          notequal,       asciicircum,    NoSymbol,       aogonek,        Aogonek     ] };
     key <AC02> { [ s,           S,              plus,           NoSymbol,       ampersand,      NoSymbol,       sacute,         Sacute      ] };
-    key <AC03> { [ t,           T,              minus,          NoSymbol,       asterisk,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+    key <AC03> { [ t,           T,              minus,          endash,         asterisk,       NoSymbol,       NoSymbol,       NoSymbol    ] };
  // key <AC04> { [ space,       space,          underscore,     space,          space,          NoSymbol,       nobreakspace,   nobreakspace] };
     key <AC04> { [ space,       space,          underscore,     underscore,     space,          space,          nobreakspace,   nobreakspace] };
     key <AC05> { [ Return ] };
