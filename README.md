@@ -285,11 +285,12 @@ modifier|none|shift|lvl_3|shift+lvl_3|lvl_5|shift+lvl_5|lvl_3+lvl_5|shift+lvl_3+
 - modify /usr/share/X11/xkb/rules/base.lst with `rules/base.lst` (like above)
 - choose `Polish (60)` keyboard layout and restart Ubuntu (VSC detects your current keyboard layout on start-up and then caches this information.)
 - add `keybinding.json` to VSC (ctrl+k ctr+s, Open Keyboard Shortcuts)
-- install `line-jumper` (in VSC <ctrl+shift+x>) 
+- install `line-jumper` (in VSC <ctrl+shift+x>) for faster cursor movement
 - install `dconf` with ubuntu software and apply files from dconf folder
 - install `Tweaks` with `sudo apt install gnome-tweak-tool`
 - install `Center Editor Window` with VSC's Ctrl+P -> ext install kaiwood.center-editor-window
 - Ubuntu, Settings, Region & Language, Manage Installed Languages, Keyboard input method -> XIM (unbinds ctrl+shift+u; unbinding with dconf doesn't work)
+- install `multi-command` (in VSC <ctrl+shift+x>) for multiCommands
 <!---copy pl file to xkb folder; add paste update--->
 
 
@@ -486,9 +487,19 @@ p|Activity Bar
 ## toogle bar
 **toogle bar** [vsc]
 -|-
--|-
+-:|-
 ctrl+b|Side Bar
 ctrl+shift+b|Activity Bar
+
+---
+
+## position panel
+**position panel** [vsc]
+ctrl+meta|Panel
+-:|:-
+j|Left
+k|Bottom
+l|Right
 
 ---
 
@@ -557,7 +568,7 @@ x|ź
 **minor replacements/tweaks**
 shortcut|command
 -:|:-
-ctrl+j ctrl+j|toggle panel
+ctrl+j|new editor/file
 ctrl+k ctrl+shift+i|format document
 ctrl+shift+f|select highlights
 ctrl+shift+4|terminal.kill
