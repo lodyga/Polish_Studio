@@ -284,12 +284,13 @@ modifier|none|shift|lvl_3|shift+lvl_3|lvl_5|shift+lvl_5|lvl_3+lvl_5|shift+lvl_3+
 - modify /usr/share/X11/xkb/rules/evdev.lst with `rules/evdev.lst` (like above)
 - modify /usr/share/X11/xkb/rules/base.lst with `rules/base.lst` (like above)
 - choose `Polish (60)` keyboard layout and restart Ubuntu (VSC detects your current keyboard layout on start-up and then caches this information.)
-- add `keybinding.json` to VSC (ctrl+k ctr+s, Open Keyboard Shortcuts)
-- install `line-jumper` (in VSC <ctrl+shift+x>) for faster cursor movement
+- Ubuntu -> Settings -> Region & Language -> Manage Installed Languages -> Keyboard input method -> XIM (unbinds ctrl+shift+u; unbinding with dconf doesn't work)
+- Ubuntu -> Settings -> Multitasking -> Fixed number of workspaces -> 4
 - install `dconf` with ubuntu software and apply files from dconf folder
 - install `Tweaks` with `sudo apt install gnome-tweak-tool`
+- add `keybinding.json` to VSC (ctrl+k ctr+s, Open Keyboard Shortcuts)
+- install `line-jumper` (in VSC <ctrl+shift+x>) for faster cursor movement
 - install `Center Editor Window` with VSC's Ctrl+P -> ext install kaiwood.center-editor-window
-- Ubuntu, Settings, Region & Language, Manage Installed Languages, Keyboard input method -> XIM (unbinds ctrl+shift+u; unbinding with dconf doesn't work)
 - install `multi-command` (in VSC <ctrl+shift+x>) for multiCommands
 <!---copy pl file to xkb folder; add paste update--->
 
