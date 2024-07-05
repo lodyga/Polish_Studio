@@ -195,6 +195,17 @@ Accepted scan codes:
     "command": "workbench.action.previousEditorInGroup"
     // "command": "workbench.action.previousEditor"
   },
+  // suppress "View: Quick Open" with "View: Open"
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
   {
     //"key": "ctrl+shift+alt+[KeyL]",
     "key": "ctrl+[KeyL] ctrl+shift+[KeyL]",
@@ -663,7 +674,24 @@ Accepted scan codes:
   {
     "key": "ctrl+meta+e",
     "command": "workbench.action.positionPanelBottom"
-  }
+  },
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
+  },
+  {
+    "key": "ctrl+shift+q",
+    "command": "workbench.action.quit"
+  },
+  {
+    "key": "ctrl+[Semicolon]",
+    "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "ctrl+shift+escape",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+
 ]
 /*
     {
