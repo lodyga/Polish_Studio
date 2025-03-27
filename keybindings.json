@@ -662,19 +662,6 @@ Accepted scan codes:
     "command": "-jupyter.runcurrentcell",
     "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused"
   },
-  // move panel
-  {
-    "key": "ctrl+meta+n",
-    "command": "workbench.action.positionPanelLeft"
-  },
-  {
-    "key": "ctrl+meta+o",
-    "command": "workbench.action.positionPanelRight"
-  },
-  {
-    "key": "ctrl+meta+e",
-    "command": "workbench.action.positionPanelBottom"
-  },
   {
     "key": "ctrl+q",
     "command": "-workbench.action.quit"
@@ -691,6 +678,26 @@ Accepted scan codes:
     "key": "ctrl+shift+escape",
     "command": "workbench.action.toggleMaximizedPanel"
   },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousSideBarView",
+    "when": "sideBarFocus"
+  }
 
 ]
 /*
