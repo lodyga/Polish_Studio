@@ -1,5 +1,4 @@
-
-partial
+partial alphanumeric_keys
 xkb_symbols "studio" {
 
     // Contact: Łukasz Łodożyński <lodyga@o2.pl>

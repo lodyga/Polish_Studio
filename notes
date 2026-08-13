@@ -1,0 +1,121 @@
+# activate Polish (Studio)
+setxkbmap -layout pl -variant studio
+setxkbmap -layout us
+
+echo $DISPLAY
+echo $XDG_SESSION_TYPE
+setxkbmap -query
+
+
+
+# pl
+xkb_symbols "dvorak_quotes" {
+name[Group1] = "Polish (Dvorak, with Polish quotes on quotemark key)";
+
+xkb_symbols "studio" {
+name[Group1] = "Polish (Studio)";
+
+# base.lst
+# evdev.lst
+  legacy          pl: Polish (legacy)
+  qwertz          pl: Polish (QWERTZ)
+  dvorak          pl: Polish (Dvorak)
+  dvorak_quotes   pl: Polish (Dvorak, with Polish quotes on quotemark key)
+  dvorak_altquotes pl: Polish (Dvorak, with Polish quotes on key 1)
+  dvp             pl: Polish (programmer Dvorak)
+  studio          pl: Polish (Studio)
+  csb             pl: Kashubian
+  szl             pl: Silesian
+  ru_phonetic_dvorak pl: Russian (Poland, phonetic Dvorak)
+
+# base.xml
+# evdev.xml
+    <layout>
+      <configItem>
+        <name>pl</name>
+        <!-- Keyboard indicator for Polish layouts -->
+        <shortDescription>pl</shortDescription>
+        <description>Polish</description>
+        <countryList>
+          <iso3166Id>PL</iso3166Id>
+        </countryList>
+        <languageList>
+          <iso639Id>pol</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>legacy</name>
+            <description>Polish (legacy)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>qwertz</name>
+            <description>Polish (QWERTZ)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak</name>
+            <description>Polish (Dvorak)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak_quotes</name>
+            <description>Polish (Dvorak, with Polish quotes on quotemark key)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak_altquotes</name>
+            <description>Polish (Dvorak, with Polish quotes on key 1)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvp</name>
+            <description>Polish (programmer Dvorak)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>studio</name>
+            <description>Polish (Studio)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>csb</name>
+            <description>Kashubian</description>
+            <languageList>
+              <iso639Id>csb</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>szl</name>
+            <description>Silesian</description>
+            <languageList>
+              <iso639Id>szl</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ru_phonetic_dvorak</name>
+            <!-- Keyboard indicator for Russian layouts -->
+            <shortDescription>ru</shortDescription>
+            <description>Russian (Poland, phonetic Dvorak)</description>
+            <languageList>
+              <iso639Id>rus</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+
+

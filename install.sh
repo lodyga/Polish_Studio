@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ssh ubuntu@138.3.245.206
 cp ./symbols/60 /usr/share/X11/xkb/symbols/
 
 # Paths to the destination files
