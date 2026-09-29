@@ -1,0 +1,196 @@
+# sudo python3 studio.py
+
+from pathlib import Path
+
+
+# modify
+# "/usr/share/X11/xkb/rules/base.lst",
+# "/usr/share/X11/xkb/rules/evdev.lst",
+# "/usr/share/X11/xkb/rules/xorg.lst"
+
+def replace_line(raw_path):
+    path = Path(raw_path)
+    
+    target = "  legacy          pl: Polish (legacy)"
+    new_line = "  studio          pl: Polish (Studio)"
+
+    text = path.read_text()
+
+    if new_line in text:
+        print(f"Line in {raw_path} already exists.")
+    elif target in text:
+        text = text.replace(target, f"{target}\n{new_line}", 1)
+        path.write_text(text)
+        print(f"Line added to {raw_path}.")
+    else:
+        print(f"Target line not found in {raw_path}.")
+
+raw_paths = [
+    "/usr/share/X11/xkb/rules/base.lst",
+    "/usr/share/X11/xkb/rules/evdev.lst",
+    "/usr/share/X11/xkb/rules/xorg.lst"
+]
+
+for raw_path in raw_paths:
+    replace_line(raw_path)
+
+
+
+# modify
+# "/usr/share/X11/xkb/rules/base.xml",
+# "/usr/share/X11/xkb/rules/evdev.xml",
+def replace_lines(raw_path):
+    path = Path(raw_path)
+
+    target = """      <variantList>\n        <variant>\n          <configItem>\n            <name>legacy</name>\n            <description>Polish (legacy)</description>\n          </configItem>\n        </variant>"""
+    new_line = """        <variant>\n          <configItem>\n            <name>studio</name>\n            <description>Polish (Studio)</description>\n          </configItem>\n        </variant>"""
+
+    text = path.read_text()
+
+    if new_line in text:
+        print(f"Line in {raw_path} already exists.")
+    elif target in text:
+        text = text.replace(target, f"{target}\n{new_line}", 1)
+        path.write_text(text)
+        print(f"Line added to {raw_path}.")
+    else:
+        print(f"Target line not found in {raw_path}.")
+
+raw_paths = [
+    "/usr/share/X11/xkb/rules/base.xml",
+    "/usr/share/X11/xkb/rules/evdev.xml",
+]
+
+for raw_path in raw_paths:
+    replace_lines(raw_path)
+
+
+# modify 
+# /usr/share/X11/xkb/symbols/pl
+path = Path("/usr/share/X11/xkb/symbols/pl")
+
+target = '''// Polish keymap with Polish quotes on key "1/!"'''
+new_line = '''partial alphanumeric_keys\nxkb_symbols "studio" {\n\n    // Contact: Łukasz Łodożyński <lodyga@o2.pl>\n\n    include "60(basic)"\n\n    name[Group1]="Polish (Studio)";\n};'''
+
+text = path.read_text()
+
+if new_line in text:
+    print("Line already exists.")
+elif target in text:
+    text = text.replace(target, f"{new_line}\n\n{target}", 1)
+    path.write_text(text)
+    print("Line added.")
+else:
+    print("Target line not found.")
+
+
+
+# insert 
+# /usr/share/X11/xkb/symbols/pl
+path = Path("/usr/share/X11/xkb/symbols/60")
+
+content = """partial alphanumeric_keys
+xkb_symbols "basic" {
+
+   // Contact: Łukasz Łodożyński <lodyga@o2.pl>
+   // Layout levels
+   
+   // lvl_1
+   // alphabet
+   // lvl_2
+   // ALPHABET
+   // lvl_3
+   // left hand         right hand
+   // '"/\\|            |home| up |pgup
+   // =+-_             |left|down|right|pgdown
+   // [{(<~        home|end |down|pgdown
+   // lvl_4
+   //
+   // ≠ –
+   // ]})>`
+   // lvl_5
+   // left hand         right hand
+   // !@#$%             789
+   // ^&*_              4560
+   // ;:,.?             123
+   // lvl_6
+   // ¡
+   //
+   // ¿
+   // lvl_7
+   // diacritics + nobreakspace
+   // lvl_8
+   // DIACRITICS + nobreakspace
+   //  modifiers
+   //  level      lvl_1        lvl_2           lvl_3           lvl_4           lvl_5           lvl_6           lvl_7           lvl_8
+   //  <A...> { [ none         shift           lvl_3           shift+lvl_3     lvl_5           shift+lvl_5     lvl_3+lvl_5     shift+lvl_3+lvl_5   ] };
+   key.type[group1]="EIGHT_LEVEL";
+   key <AE01> { [ 1,           exclam,         exclam,         NoSymbol,       notequal,       exclamdown     ] };
+   key <AE02> { [ 2,           at,             at,             NoSymbol,       twosuperior,    questiondown   ] };
+   key <AE03> { [ 3,           numbersign,     numbersign,     NoSymbol,       threesuperior,  sterling       ] };
+   key <AE04> { [ 4,           dollar,         dollar,         NoSymbol,       cent,           onequarter     ] };
+   key <AE05> { [ 5,           percent,        percent,        NoSymbol,       EuroSign,       U2030          ] };
+   key <AE06> { [ 6,           asciicircum,    asciicircum,    NoSymbol,       onehalf,        logicaland     ] };
+   key <AE07> { [ 7,           ampersand,      ampersand,      NoSymbol,       section,        U2248          ] };
+   key <AE08> { [ 8,           asterisk,       asterisk,       NoSymbol,       periodcentered, threequarters  ] };
+   key <AE09> { [ 9,           parenleft,      parenleft,      NoSymbol,       guillemotleft,  plusminus      ] };
+   key <AE10> { [ 0,           parenright,     parenright,     NoSymbol,       guillemotright, degree         ] };
+   
+   key.type[group1]="EIGHT_LEVEL_SEMIALPHABETIC";
+   key <AE11> { [ dead_cedilla,dead_ogonek,    dead_diaeresis, dead_abovering, dead_tilde,     dead_macron,    dead_hook,      dead_horn   ] };
+   key <AE12> { [ dead_acute, dead_doubleacute,dead_circumflex,dead_caron,     dead_grave,     dead_breve,     dead_belowdot,  dead_abovedot ] };  
+   key <AD01> { [ q,           Q,              apostrophe,     semicolon,      exclam,         exclamdown,     NoSymbol,       NoSymbol    ] };
+   key <AD02> { [ w,           W,              quotedbl,       colon,          at,             NoSymbol,       NoSymbol,       NoSymbol    ] };
+   key <AD03> { [ f,           F,              slash,          comma,          numbersign,     NoSymbol,       Greek_phi,      Greek_PHI   ] };
+   key <AD04> { [ k,           K,              backslash,      period,         dollar,         NoSymbol,       NoSymbol,       NoSymbol    ] };    
+   key <AD05> { [ g,           G,              bar,            question,       percent,        NoSymbol,       NoSymbol,       NoSymbol    ] };
+// key <AD06> { [ NoSymbol,    Caps_Lock,      NoSymbol,       NoSymbol,       asciicircum,    NoSymbol,       NoSymbol,       NoSymbol    ] };
+   key <AD07> { [ l,           L,              Home,           Home,           7,              F7,             lstroke,        Lstroke     ] };
+   key <AD08> { [ u,           U,              Up,             Up,             8,              F8,             NoSymbol,       NoSymbol    ] };
+   key <AD09> { [ d,           D,              Prior,          Prior,          9,              F9,             Greek_delta,    Greek_DELTA ] };
+   key <AD10> { [ p,           P,              NoSymbol,       NoSymbol,       p,              NoSymbol,       Greek_pi,       Greek_PI    ] };
+   key <AD12> { [ dead_cedilla,  dead_ogonek,  dead_diaeresis, dead_abovering, dead_tilde,     dead_macron,    dead_hook,      dead_horn   ] };
+   key <BKSL> { [ dead_acute, dead_doubleacute,dead_circumflex,dead_caron,     dead_grave,     dead_breve,     dead_belowdot,  dead_abovedot ] };
+   
+   key <AC01> { [ a,           A,              equal,          notequal,       asciicircum,    NoSymbol,       aogonek,        Aogonek     ] };
+   key <AC02> { [ s,           S,              plus,           NoSymbol,       ampersand,      NoSymbol,       sacute,         Sacute      ] };
+   key <AC03> { [ t,           T,              minus,          endash,         asterisk,       NoSymbol,       Greek_tau,      Greek_TAU   ] };
+// key <AC04> { [ space,       space,          underscore,     space,          space,          NoSymbol,       nobreakspace,   nobreakspace] };
+   key <AC04> { [ space,       space,          underscore,     underscore,     space,          space,          nobreakspace,   nobreakspace] };
+   key <AC05> { [ Return ] };
+   key <AC06> { [ r,           R,              asciitilde,     NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+   key <AC07> { [ n,           N,              Left,           Left,           4,              F4,             nacute,         Nacute      ] };
+   key <AC08> { [ e,           E,              Down,           Down,           5,              F5,             eogonek,        Eogonek     ] };
+   key <AC09> { [ o,           O,              Right,          Right,          6,              F6,             oacute,         Oacute      ] };
+   key <AC10> { [ i,           I,              Next,           Next,           0,              F10,            NoSymbol,       NoSymbol    ] };
+   key <AB01> { [ z,           Z,              bracketleft,    bracketright,   semicolon,      NoSymbol,       zabovedot,      Zabovedot   ] };
+   key <AB02> { [ x,           X,              braceleft,      braceright,     colon,          NoSymbol,       zacute,         Zacute      ] };
+   key <AB03> { [ c,           C,              parenleft,      parenright,     comma,          NoSymbol,       cacute,         Cacute      ] };
+   key <AB04> { [ v,           V,              less,           greater,        period,         NoSymbol,       NoSymbol,       NoSymbol    ] };
+   key <AB05> { [ b,           B,              asciitilde,     grave,          question,       questiondown,   Greek_beta,     Greek_BETA  ] };
+   key <AB06> { [ h,           H,              Home,           Home,           NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+   key <AB07> { [ m,           M,              End,            End,            1,              F1,             mu,             masculine   ] };
+   key <AB08> { [ y,           Y,              Down,           Down,           2,              F2,             NoSymbol,       NoSymbol    ] };
+   key <AB09> { [ j,           J,              Next,           Next,           3,              F3,             NoSymbol,       NoSymbol    ] };
+// key <AB04> { [ v,           V,              less,           asciitilde,     period,         NoSymbol,       NoSymbol,       NoSymbol    ] };
+// key <AB05> { [ b,           B,              greater,        grave,          question,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+   key.type[Group1] = "ONE_LEVEL";
+   key <AD06> { [ Caps_Lock ] };
+   key <AB10> { [ Shift_L  ] };
+   key <AC11> { [ BackSpace] };
+// key <ESC>  { [ Escape   ] };
+   key <TLDE> { [ Escape   ] };
+   key <SPCE> { [ ISO_Level5_Shift ] };
+   key <CAPS> { [ Tab, ISO_Left_Tab ] };
+   key <AD11>	{ [ BackSpace] };
+   modifier_map Lock { Caps_Lock };
+   
+   include "kpdl(comma)"
+   include "level3(ralt_switch)"
+// include "shift(both_capslock)"
+   include "ctrl(menu_rctrl)"
+};
+"""
+
+path.write_text(content)
+print(f"Created {path}")
