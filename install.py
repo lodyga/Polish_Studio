@@ -1,4 +1,15 @@
-# sudo python3 studio.py
+"""
+install via GitHub
+curl -fsSL https://raw.githubusercontent.com/lodyga/Polish_Studio/main/install.py | sudo python3
+
+download installer from GitHub
+curl -O https://raw.githubusercontent.com/lodyga/Polish_Studio/main/install.py
+wget https://raw.githubusercontent.com/lodyga/Polish_Studio/main/install.py
+
+install local file
+sudo python3 studio.py
+"""
+
 
 from pathlib import Path
 
